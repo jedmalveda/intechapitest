@@ -23,3 +23,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/getUsers', [UserController::class, 'getUsers']);
 
 Route::get('/getStudents', [StudentController::class, 'getStudents']);
+Route::post('/addNewStudent', [StudentController::class, 'addNewStudent']);
+Route::put('/updateStudent', [StudentController::class, 'updateStudent']);
+Route::delete('/deleteStudent', [StudentController::class, 'deleteStudent']);
