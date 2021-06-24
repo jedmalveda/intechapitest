@@ -26,7 +26,7 @@ class StudentController extends Controller
         $student = Student::find($request->id);
         $student->update([
             'name' => $request->name ?  $request->name : $student->name,
-            'grade' => $request->grade ?  $request->name : $student->grade,
+            'grade' => $request->grade ?  $request->grade : $student->grade,
         ]);
 
         return $student;
