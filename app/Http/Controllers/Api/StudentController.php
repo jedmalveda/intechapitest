@@ -16,7 +16,8 @@ class StudentController extends Controller
     public function addNewStudent(Request $request)
     {
         return Student::create([
-            $request->all()
+            'name' => $request['name'],
+            'grade' => $request['grade']
         ]);
     }
 
